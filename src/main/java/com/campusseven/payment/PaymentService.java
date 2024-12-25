@@ -6,11 +6,12 @@ import java.time.LocalDateTime;
 
 public class PaymentService {
     //private final WebApiExRateProvider exRateProvider;
-    private final SimpleExRateProvider exRateProvider;
+   // private final SimpleExRateProvider exRateProvider;
+    private final ExRateProvider exRateProvider;
 
     public PaymentService() {
-        //this.exRateProvider = new WebApiExRateProvider();
-        this.exRateProvider = new SimpleExRateProvider();
+        this.exRateProvider = new WebApiExRateProvider();
+        //this.exRateProvider = new SimpleExRateProvider();
     }
 
     public Payment prepare(Long orderId, String currency, BigDecimal foreignCurrencyAmount) throws IOException {
