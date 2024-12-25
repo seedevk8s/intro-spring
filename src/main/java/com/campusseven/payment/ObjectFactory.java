@@ -2,6 +2,10 @@ package com.campusseven.payment;
 
 public class ObjectFactory {
     public PaymentService paymentService() {
-        return new PaymentService(new SimpleExRateProvider());
+        return new PaymentService(exRateProvider());
+    }
+
+    public ExRateProvider exRateProvider() {
+        return new WebApiExRateProvider();
     }
 }
