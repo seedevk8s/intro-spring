@@ -12,6 +12,6 @@ public class ObjectFactory {
 
     @Bean
     public ExRateProvider exRateProvider() {
-        return new SimpleExRateProvider();
+        return new WebApiExRateProvider();
     }
 }
